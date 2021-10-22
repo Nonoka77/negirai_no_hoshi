@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'static_pages#top'
   get 'static_pages/top', to: 'static_pages#top'
   get 'static_pages/privacy', to: 'static_pages#privacy'
