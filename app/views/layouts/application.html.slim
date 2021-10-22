@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    = render 'layouts/meta_tags'
+    = stylesheet_link_tag 'application', media: 'all'
+    = yield 'stylesheets'
+    = javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
+    = javascript_include_tag 'application'
+  body
+    = render 'layouts/header'
+
+    section.container.page-content
+      main = yield
