@@ -3,9 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-# slim
-gem 'html2slim'
-gem 'slim-rails'
 # Font Awesome
 gem 'font-awesome-sass'
 # 初期データを入れる。
