@@ -1,0 +1,15 @@
+current directory: /Users/abenonoka/negirai_planet_app/negirai_planet/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+/Users/abenonoka/.rbenv/versions/2.6.4/bin/ruby -I /Users/abenonoka/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20211022-90484-j3p9sj.rb extconf.rb
+creating Makefile
+
+current directory: /Users/abenonoka/negirai_planet_app/negirai_planet/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/abenonoka/negirai_planet_app/negirai_planet/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/abenonoka/negirai_planet_app/negirai_planet/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20211022-90484-bn5012/skiptrace/internal
