@@ -54,6 +54,7 @@ group :development, :test do
   gem 'rubocop-checkstyle_formatter'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rspec_junit_formatter'
+  gem 'sqlite3', '~> 1.4' # <= 開発環境とテスト環境用として設定
 end
 
 group :development do
@@ -77,6 +78,10 @@ group :test do
   gem 'webdrivers'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
