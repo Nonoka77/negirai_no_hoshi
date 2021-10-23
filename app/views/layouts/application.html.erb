@@ -4,6 +4,8 @@
     <title>NegiraiPlanet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +13,8 @@
 
   <body>
   <%= render 'shared/flash_message' %>
-  <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex">
+    <%= yield %>
+    </main>
   </body>
 </html>
