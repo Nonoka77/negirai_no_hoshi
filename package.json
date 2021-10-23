@@ -1,5 +1,7 @@
 {
   "name": "negirai_planet",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "tailwindcss": "^2.2.17"
+  }
 }
