@@ -80,8 +80,7 @@ end
 
 #ログイン機能
 gem 'devise'
-
 gem 'dotenv-rails'
-
+gem 'tailwindcss-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
