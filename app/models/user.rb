@@ -7,6 +7,9 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :username, uniqueness: true
 
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
   def email_required?
     false
   end
@@ -20,5 +23,9 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.confirmed_at = Time.now
     end
+  end
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
   end
 end
