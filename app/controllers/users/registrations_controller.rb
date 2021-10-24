@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_sign_up_params, only: %i[:create]
+  before_action :ensure_normal_user, only: %i[destroy update]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -48,6 +49,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email])
+  end
+
+  def ensure_normal_user
+    if resource.email == 'guest@example.com'
+      redirect_to root_path, danger: 'ゲストユーザーはの更新・削除はできません'
   end
 
   # The path used after sign up.
