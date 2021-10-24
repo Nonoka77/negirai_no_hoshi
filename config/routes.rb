@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   get 'privacy', to: 'static_pages#privacy'
   get 'term', to: 'static_pages#term'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resource :posts, only: %i[index, show, new, create] do
+    resource :likes, only: %i[create, destroy]
+  end
+
 end
