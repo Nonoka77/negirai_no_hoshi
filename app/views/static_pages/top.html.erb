@@ -1,0 +1,41 @@
+<body class="relative bg-gradient-to-b 
+    from-gray-900 
+    via-blue-900 
+    to-blue-900 
+    text-white 
+    h-screen">
+
+    <div class="absolute">
+        <%= image_tag('stars.png')%>
+    </div>
+
+    <h2 class="text-6xl text-center p-8" >ねぎらいの星</h2>
+
+
+    <div class="container absolute text-center">
+        <div class="mb-4">
+            <p>ここはねぎらいの星。</p>
+            <p>ここでのコミュニケーションで使える言葉は3つだけ。</p>
+            <p>ねぎらいの星に訪れた誰かにねぎらってもらい、ときにはあなたが誰かをねぎらってあげましょう。</p>
+        </div>
+
+        <div class="mb-4">
+            <h3>ねぎらいの星に訪れる人</h3>
+            <p>1. 誰かに褒められたい</p>
+            <p>2. 不安や悩みを周囲には話すことができない</p>
+            <p>3. 頑張っている自分を誰かにねぎらってもらいたい</p>
+        </div>
+
+        <div class="mb-4">
+            <h3>ねぎらいの星で使える言葉</h3>
+            <p>1. ありがとう</p>
+            <p>2. 頑張ってるね</p>
+            <p>3. 大丈夫</p>
+        </div>
+    <%= link_to 'ログイン', new_user_session_path, class: "bg-transparent border py-2 px-4 border-white rounded-full " %>
+    <%= link_to '新規登録', new_user_registration_path, class: "bg-transparent border py-2 px-4 rounded-full border-white" %>
+    </div>
+
+</body>
+
+</html>
