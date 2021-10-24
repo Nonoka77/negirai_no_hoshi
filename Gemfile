@@ -80,7 +80,11 @@ end
 
 #ログイン機能
 gem 'devise'
+#環境変数
 gem 'dotenv-rails'
+#cssフレームワーク
 gem 'tailwindcss-rails'
+#ajax機能
+gem 'jquery-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
