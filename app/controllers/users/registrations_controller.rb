@@ -54,8 +54,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def ensure_normal_user
     if resource.email == 'guest@example.com'
       redirect_to root_path, danger: 'ゲストユーザーはの更新・削除はできません'
+    end
   end
-
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
   #   super(resource)
