@@ -86,5 +86,7 @@ gem 'dotenv-rails'
 gem 'tailwindcss-rails'
 #ajax機能
 gem 'jquery-rails'
+#入力フォーム
+gem 'simple_form'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
