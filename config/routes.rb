@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'term', to: 'static_pages#term'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :posts do
+  resources :posts, only: %i[index show edit create destroy] do
     resource :likes,only: %i[create destroy]
   end
 
