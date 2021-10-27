@@ -12,10 +12,9 @@
   <% @posts.each do |post| %>
     <td class="post" id="post<%= post.id%>">
       <span class="post_name"><%= post.user.username %></span>
-      <%= simple_format post.content, class: "post_body" %>
+      <%= simple_format post.content, id: "post_body" %>
       <%#編集ボタンを押すことで編集フォームを表示する %>
         <div id="js-post-<%= post.id %>">
-          <p id="js-post-label-<%= post.id %>"><%= post.content %></p>
           <p id="js-post-error-<%= post.id %>" class="text-danger"></p>
           <textarea style="display: none;" id="js-textarea-post-<%= post.id %>" class="form-control post-error"><%= post.content %></textarea>
           <div id="js-post-button-<%= post.id %>" style="display: none;">
