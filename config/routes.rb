@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index edit create destroy update] do
     resource :likes, only: %i[create destroy]
     resource :calms, only: %i[create destroy]
+    resource :cheers, only: %i[create destroy]
   end
 
 end

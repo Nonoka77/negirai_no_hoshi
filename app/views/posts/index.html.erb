@@ -23,6 +23,9 @@
               <span id="index_calm_<%= post.id %>">
                   <%= render 'calms/calm', post: post %>
               </span>
+              <span id="index_cheer_<%= post.id %>">
+                  <%= render 'cheers/cheer', post: post %>
+              </span>
               <% if user_signed_in? && post.user_id == current_user.id %>
                   <span data-post-id="<%= post.id %>" class="js-edit-button">
                       <%= fa_icon "edit", style: "color: gray" %>

@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :calms, dependent: :destroy
+  has_many :cheers, dependent: :destroy
 
   def email_required?
     false
@@ -32,5 +33,9 @@ class User < ApplicationRecord
 
   def already_calmed?(post)
     self.calms.exists?(post_id: post.id)
+  end
+
+  def already_cheered?(post)
+    self.cheers.exists?(post_id: post.id)
   end
 end
