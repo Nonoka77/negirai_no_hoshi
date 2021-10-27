@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
     <% if current_user.already_calmed?(post) %>
         <%= link_to post_calms_path(post), method: :delete, remote: true do %>
-            <%= fa_icon "coffee", style: "color: brown;" %>
+            <%= icon('fas', 'mug-hot') %>
             <%= post.calms.count %>
         <% end %>
     <% else %>
         <%= link_to post_calms_path(post), method: :post, remote: true do %>
-            <%= fa_icon "coffee", style: "color: gray" %>
+            <%= icon('fas', 'coffee', style: 'color: gray;') %>
             <%= post.calms.count %>
         <% end %>
     <% end %>

@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
     <% if current_user.already_liked?(post) %>
         <%= link_to post_likes_path(post), method: :delete, remote: true do %>
-            <%= fa_icon "heart", style: "color: red;" %>
+            <%= icon('fas', 'smile-wink') %>
             <%= post.likes.count %>
         <% end %>
     <% else %>
         <%= link_to post_likes_path(post), method: :post, remote: true do %>
-            <%= fa_icon "heart", style: "color: gray" %>
+            <%= icon('far', 'smile-wink') %>
             <%= post.likes.count %>
         <% end %>
     <% end %>

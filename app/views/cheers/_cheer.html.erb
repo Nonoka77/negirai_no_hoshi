@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+    <% if current_user.already_cheered?(post) %>
+        <%= link_to post_cheers_path(post), method: :delete, remote: true do %>
+            <%= icon('fas', 'smile-wink') %>
+            <%= post.cheers.count %>
+        <% end %>
+    <% else %>
+        <%= link_to post_cheers_path(post), method: :post, remote: true do %>
+            <%= icon('far', 'smile-wink') %>
+            <%= post.cheers.count %>
+        <% end %>
+    <% end %>
+<% end %>

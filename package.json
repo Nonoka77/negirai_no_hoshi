@@ -9,6 +9,7 @@
     "tailwindcss": "1.9.6"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@fullhuman/postcss-purgecss": "^4.0.3"
   }
 }
