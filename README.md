@@ -1,24 +1,38 @@
-# README
+# ねぎらいの星
+ねぎらいの星であなたと、ねぎらいの星に訪れる誰かをねぎらいましょう。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# サービス概要
+「誰かに褒められたい」、「弱音や愚痴を吐きたい」。
+そんな頑張り屋さんなあなたのために生まれたのが、ねぎらいの星です。
+ねぎらいの星に訪れた誰かをねぎらい、ねぎらってもらうことで疲れた心を癒しましょう。
+# 登場人物
 
-Things you may want to cover:
+* エンドユーザー
+  - 弱音を吐いたり、誰かに褒めてもらいたい人
 
-* Ruby version
+# ユーザーが抱える悩み
 
-* System dependencies
+* 弱音を吐きたいが、そっと背中を押してもらえる言葉が欲しいだけのときや誰かに聞いてもらいたいだけのときがある
+* 親しい人が周りにいても、弱音を吐くことはできない
+* 誰かに褒めてもらいたい
+* 不安に思うことがたくさんある
 
-* Configuration
+# 解決方法
+---
+* ねぎらいの星で誰かにねぎらってもらうことで癒される
+* ねぎらって欲しい、ねぎらいの星に訪れた誰かをねぎらうことで自身も癒される
 
-* Database creation
+# 実装予定の機能
+---
+* メッセージを投稿できる
+* ねぎらいの星では3つの言葉を表すスタンプだけでコミュニケーションする。
+  1. ありがとう
+  2. 頑張ってるね
+  3. 大丈夫
+* スタンプされた数が表示される
+* 他のユーザーのメッセージにコメントできない。
+* 自分が投稿したメッセージは一覧で確認できる。
+* ログイン機能
+* ゲストログイン機能
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
