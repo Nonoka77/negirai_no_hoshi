@@ -1,36 +1,45 @@
-
-<h4>ねぎらいの星に訪れたひとのメッセージ</h4>
-  <div class="form">
-    <% if user_signed_in? %>
-      <%= form_with(model: @post, class: "post_form", id: "post_input", remote:true) do |f| %>
-        <%= f.text_area :content, class: "post_form-text" %>
-        <%= f.submit "送信", class: "post_form-btn" %>
-      <% end %>
-    <% end %>
-  </div>
-<tr class="posts">
-  <% @posts.each do |post| %>
-    <td class="post" id="post<%= post.id%>">
-      <span class="post_name"><%= post.user.username %></span>
-      <%= simple_format post.content, id: "post_body" %>
-      <%#編集ボタンを押すことで編集フォームを表示する %>
-        <div id="js-post-<%= post.id %>">
-          <p id="js-post-error-<%= post.id %>" class="text-danger"></p>
-          <textarea style="display: none;" id="js-textarea-post-<%= post.id %>" class="form-control post-error"><%= post.content %></textarea>
-          <div id="js-post-button-<%= post.id %>" style="display: none;">
-            <button data-cancel-id=<%= post.id %> type="button" class="btn btn-light post-cancel-button">キャンセル</button>
-            <button data-update-id=<%= post.id%> type="submit" class="btn btn-success post-update-button">更新</button>
+<div class="container md p-20 z-20 absolute">
+  <h4 class="mb-6">ねぎらいの星に訪れたひとのメッセージ</h4>
+  <tr class="posts">
+    <% @posts.each do |post| %>
+      <td class="post" id="post<%= post.id%>">
+        <div class="pt-3 pl-3 content mb-4 border w-auto rounded-md bg-white text-black ">
+          <div class="message mb-3 ">
+            <%= simple_format post.content, id: "post_body" %>
           </div>
+          <%#編集ボタンを押すことで編集フォームを表示する %>
+            <div id="js-post-<%= post.id %>">
+              <p id="js-post-error-<%= post.id %>" class="text-danger"></p>
+              <textarea style="display: none;" id="js-textarea-post-<%= post.id %>" class="form-control post-error"><%= post.content %></textarea>
+              <div id="js-post-button-<%= post.id %>" style="display: none;">
+                <button data-cancel-id=<%= post.id %> type="button" class="btn btn-light post-cancel-button">キャンセル</button>
+                <button data-update-id=<%= post.id%> type="submit" class="btn btn-success post-update-button">更新</button>
+              </div>
+            </div>
+            <div class="side-bar space-x-20">
+              <span id="index_like_<%= post.id %>">
+                  <%= render 'likes/like', post: post %>
+              </span>
+              <span id="index_calm_<%= post.id %>">
+                  <%= render 'calms/calm', post: post %>
+              </span>
+              <% if user_signed_in? && post.user_id == current_user.id %>
+                  <span data-post-id="<%= post.id %>" class="js-edit-button">
+                      <%= fa_icon "edit", style: "color: gray" %>
+                  </span>
+                  <%= link_to "削除", post_path(post.id), class:"post_delete", method: :delete %>
+              <% end %>
+            </div>
         </div>
-        <% if user_signed_in? && post.user_id == current_user.id %>
-            <%= link_to "削除", post_path(post.id), class:"post_delete", method: :delete %>
-            <span data-post-id="<%= post.id%>" class="js-edit-button">
-                <%= fa_icon "edit", style: "color: gray" %>
-            </span>
+      </td>
+    <% end %>
+    <div class="form text-black">
+      <% if user_signed_in? %>
+        <%= form_with(model: @post, class: "post_form", id: "post_input", remote:true) do |f| %>
+          <%= f.text_area :content, class: "post_form-text rounded-md w-full mb-3" %>
+          <%= f.submit "送信", class: "text-white post_form-btn bg-transparent border rounded-md px-3 py-2" %>
         <% end %>
-      <span id="index_like_<%= post.id %>">
-          <%= render 'likes/like', post: post %>
-      </span>
-    </td>
-  <% end %>
-</tr>
+      <% end %>
+    </div>
+  </tr>
+</div>
