@@ -29,7 +29,6 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -63,6 +62,7 @@ group :development do
 
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-rails'
 end
 
 group :test do
