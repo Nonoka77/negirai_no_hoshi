@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post 'login', to: 'users/sessions#create'
     delete 'signout', to: 'users/sessions#destroy'
     post 'guest_sign_in', to: 'users/sessions#guest_sign_in'
+    get 'users/show', to: 'users#show'
   end
 
 
@@ -23,5 +24,7 @@ Rails.application.routes.draw do
     resource :calms, only: %i[create destroy]
     resource :cheers, only: %i[create destroy]
   end
+
+  resource :profiles, only: %i[show edit update]
 
 end
