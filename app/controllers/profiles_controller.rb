@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user, only: %i[update edit]
+  before_action :set_user
   def show; end
 
   def edit; end
@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
   private
 
   def set_user
-    @user = User.find(id: current_user.id)
+    @user = current_user
   end
 
   def user_params

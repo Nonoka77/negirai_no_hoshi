@@ -1,4 +1,25 @@
-<div>
-  <h1 class="text-xl font-bold">Profiles#edit</h1>
-  <p>Find me in app/views/profiles/edit.html.erb</p>
-<div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>プロフィール</h1>
+      <%= form_with model: @user, url: profiles_path, method: :patch, local: true do |f|%>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field  :email, id: 'user_email', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= f.label :avatar %>
+            <%= f.file_field :avatar, onchange: 'previewImage()', class: 'form-control' %>
+            <%= f.hidden_field :avatar_cache %>
+        </div>
+        <div class='mt-3 mb-3'>
+            <%= image_tag @user.avatar.url, id: 'preview', size: '100x100', class: 'rounded-circle mr15' %>
+        </div>
+        <div class="actions">
+        <%= f.submit  class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

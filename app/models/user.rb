@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :calms, dependent: :destroy
   has_many :cheers, dependent: :destroy
+  mount_uploader :avatar, AvatarUploader
 
   def email_required?
     false
