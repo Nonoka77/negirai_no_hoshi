@@ -13,6 +13,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# User Bootstrap for stylesheets
+gem 'bootstrap-sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'sassc-rails', '~> 2.1', '>= 2.1.1'
@@ -82,8 +84,7 @@ end
 gem 'devise'
 #環境変数
 gem 'dotenv-rails'
-#cssフレームワーク
-gem 'tailwindcss-rails'
+
 #ajax機能
 gem 'jquery-rails'
 #入力フォーム
