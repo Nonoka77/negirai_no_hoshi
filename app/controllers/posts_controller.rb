@@ -21,15 +21,11 @@ before_action :set_post, only: %i[edit update destroy]
     end 
   end
 
-
   def index
     @post = Post.new
     @posts = Post.includes(:user)
   end
 
-  def show
-    @post = Post.find(params[:id])
-  end
 
   def destroy
     if @post.destroy
