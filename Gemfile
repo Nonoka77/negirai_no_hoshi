@@ -84,15 +84,15 @@ end
 gem 'devise'
 #環境変数
 gem 'dotenv-rails'
-
 #ajax機能
 gem 'jquery-rails'
 #入力フォーム
 gem 'simple_form'
-
 #画像のアップロード
 gem 'carrierwave'
 gem 'mini_magick'
+#日本語翻訳
+gem 'rails-i18n'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

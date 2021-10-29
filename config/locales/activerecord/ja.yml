@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      posts: 'メッセージ'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        username: 'ユーザー名'
+        avatar: 'アイコン'
+      post:
+        title: 'タイトル'
+        content: 'メッセージ'
+  attributes:
+    id: 'ID'
+    created_at: '作成日時'
+    updated_at: '更新日時'
