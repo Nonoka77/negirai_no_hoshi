@@ -1,14 +1,14 @@
-<div class="absolute z-20">
-  <h2>Log in</h2>
+<div class="container">
+  <h2>ログイン</h2>
   <%= form_with model: @user, url: login_path, local: true do |f| %>
     <div class="field">
       <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "username", class:"text-black"  %>
+      <%= f.text_field :username, autofocus: true, autocomplete: "username", class:"feedback-input"  %>
     </div>
   
     <div class="field">
       <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password", class:"text-black"  %>
+      <%= f.password_field :password, autocomplete: "current-password", class:"feedback-input"  %>
     </div>
   
     <% if devise_mapping.rememberable? %>
@@ -19,7 +19,7 @@
     <% end %>
   
     <div class="actions">
-      <%= f.submit "Log in", class:"text-black" %>
+      <%= f.submit t("defaults.login"), class:"submit-btn" %>
     </div>
   <% end %>
 </div>
