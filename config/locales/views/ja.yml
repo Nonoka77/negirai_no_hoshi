@@ -39,11 +39,13 @@ ja:
   profiles:
     edit:
       title: 'プロフィール編集'
+      update: '更新する'
     update:
       success: 'ユーザーを更新しました'
       fail: 'ユーザーを更新できませんでした'
     show:
       title: 'プロフィール'
+      edit: '編集する'
   password_resets:
     new:
       title: 'パスワードリセット申請'
