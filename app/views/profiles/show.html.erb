@@ -1,6 +1,11 @@
-
-
-    <div class='mt-3 mb-3'>
-      <%= image_tag @user.avatar.url, id: 'preview', size: '100x100', class: 'rounded-circle mr15' %>
+<div class= "container">
+<h1><%= t('.title') %></h1>
+  <div class="profiles-header">
+    <%= image_tag @user.avatar.url, id: 'preview', size: '100x100', class: 'rounded-circle mr15' %>
+    <p class="profile-content"><%= @user.username %></p>
+    <p class="profile-content"><%= @user.email %></p>
+  </div>
+    <div class="profiles-footer">
+      <%= link_to t(".edit"), edit_profiles_path, class: "edit-btn" %>
     </div>
-    
+</div>
