@@ -30,7 +30,7 @@ body {
     background: linear-gradient(to bottom, #050d20 0%, #1d2e49 50%, #1e3d6b 100%);
     color: white;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     &::after {
         content: "";
         position: absolute;
