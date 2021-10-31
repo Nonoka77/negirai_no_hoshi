@@ -1,0 +1,31 @@
+
+<div class="container">
+  <h1><%= t('.title') %></h1>
+  <div class="profiles-header">
+    <div>
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url, id: 'preview', size: '80x80', class: 'rounded-circle' %>
+      <% else %>
+        <%= image_tag src='default.png', class: "rounded-circle", size: '100x100' %>
+      <% end %>   
+    </div>
+  <%= form_with model: @user, url: profiles_path, method: :patch, local: true do |f|%>
+    <div class="form-group">
+      <%= f.label :username, class:"input-form" %>
+      <%= f.text_field  :username, class: 'edit-input' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, class:"input-form"%>
+      <%= f.email_field  :email, class: 'edit-input' %>
+    </div>
+    <div class="form-group">
+        <%= f.label :avatar, class:"input-form"%>
+        <%= f.file_field :avatar, onchange: 'previewImage()', class: 'edit-input' %>
+        <%= f.hidden_field :avatar_cache %>
+    </div>
+    <div class="profiles-footer">
+    <%= f.submit  class: 'edit-btn' %>
+    </div>
+  <% end %>
+  </div>
+</div>

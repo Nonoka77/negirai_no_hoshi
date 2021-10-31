@@ -1,0 +1,33 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    .home-btn {
+        font-size: 1.2rem;
+        margin-right: 20px;
+        line-height: 1.5;
+        position: relative;
+        display: inline-block;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        border-radius: 0.5rem;
+        color: white;
+        font-weight: 700;
+        border-radius: 100vh;
+        background-color: rgb(192, 192, 15);
+        box-shadow: 0 5px 10px rgba(236, 229, 229, 0.2);
+        &::hover {
+            box-shadow: 0 15px 15px rgba(255, 253, 253, 0.3);
+        }
+    }
+}

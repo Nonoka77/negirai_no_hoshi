@@ -3,9 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-# slim
-gem 'html2slim'
-gem 'slim-rails'
 # Font Awesome
 gem 'font-awesome-sass'
 # 初期データを入れる。
@@ -31,11 +28,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
+gem 'webpacker'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -69,6 +63,7 @@ group :development do
 
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-rails'
 end
 
 group :test do
@@ -83,6 +78,20 @@ end
 group :production do
   gem 'pg'
 end
+
+#ログイン機能
+gem 'devise'
+#環境変数
+gem 'dotenv-rails'
+#ajax機能
+gem 'jquery-rails'
+#入力フォーム
+gem 'simple_form'
+#画像のアップロード
+gem 'carrierwave'
+gem 'mini_magick'
+#日本語翻訳
+gem 'rails-i18n'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

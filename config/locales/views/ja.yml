@@ -1,0 +1,61 @@
+ja:
+  time:
+    formats:
+      defaults:  "%Y/%m/%d %H:%M"
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    require_login: 'ログインしてください'
+    post: '投稿'
+    upload: '更新する'
+    edit: '編集'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+  posts:
+    defaults:
+      avatar: 'アイコン'
+    index:
+      content: 'メッセージ一覧'
+    create:
+      title: 'ねぎらいの場'
+      success: "%{item}を送信しました"
+      fail: "%{item}を送信できませんでした"
+  profiles:
+    edit:
+      title: 'プロフィール編集'
+      update: '更新する'
+    update:
+      success: 'ユーザーを更新しました'
+      fail: 'ユーザーを更新できませんでした'
+    show:
+      title: 'プロフィール'
+      edit: '編集する'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワード変更'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update: 
+      success: パスワードを変更しました'
+      fail:  'パスワードの変更に失敗しました'
+
+  
