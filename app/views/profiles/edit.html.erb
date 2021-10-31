@@ -3,7 +3,11 @@
   <h1><%= t('.title') %></h1>
   <div class="profiles-header">
     <div>
-        <%= image_tag @user.avatar.url, id: 'preview', size: '100x100', class: 'rounded-circle mr15' %>
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url, id: 'preview', size: '80x80', class: 'rounded-circle' %>
+      <% else %>
+        <%= image_tag src='default.png', class: "rounded-circle", size: '100x100' %>
+      <% end %>   
     </div>
   <%= form_with model: @user, url: profiles_path, method: :patch, local: true do |f|%>
     <div class="form-group">
