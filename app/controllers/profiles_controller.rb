@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_user
-  def show; end
+  def show
+    @posts= Post.where(user_id: current_user.id).order(created_at: :desc)
+  end
 
   def edit; end
 
