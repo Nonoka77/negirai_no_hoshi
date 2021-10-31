@@ -23,7 +23,7 @@ before_action :set_post, only: %i[edit update destroy]
 
   def index
     @post = Post.new
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).order(created_at: :desc)
   end
 
 
