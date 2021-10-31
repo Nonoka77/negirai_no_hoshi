@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
     <% if current_user.already_liked?(post) %>
-        <%= link_to post_likes_path(post), method: :delete, remote: true do %>
-            <%= icon('fas', 'smile-wink') %>
-            <%= post.likes.count %>
+        <%= link_to post_likes_path(post), class: "react-icon", method: :delete, remote: true do %>
+            <%= icon('fas', 'heart', style: 'color: red;') %>
+            <span class="icon-count">ありがとう <%= post.likes.count %></span>
         <% end %>
     <% else %>
-        <%= link_to post_likes_path(post), method: :post, remote: true do %>
-            <%= icon('far', 'smile-wink') %>
-            <%= post.likes.count %>
+        <%= link_to post_likes_path(post), class: "react-icon", method: :post, remote: true do %>
+            <%= icon('far', 'heart', style: 'color: gray;') %>
+            <span class="icon-count">ありがとう <%= post.likes.count %></span>
         <% end %>
     <% end %>
 <% end %>
