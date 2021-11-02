@@ -1,31 +1,39 @@
 
     <div class="container">
-        <h2 class="text-6xl p-8" >ねぎらいのほし</h2>
-        <div class="mb-4">
-            <p>ここはねぎらいの星。</p>
-            <p>ここでのコミュニケーションで使える言葉は3つだけ。</p>
-            <p>ねぎらいの星に訪れた誰かにねぎらってもらい、ときにはあなたが誰かをねぎらってあげましょう。</p>
+        <h1 class="text-center p-8 mb-5" >ねぎらいのほし</h1>
+        <div class="mb-5">
+            <p>ここはねぎらいのほし。</p>
+            <p>疲れた人々の心を癒す星です。</p>
         </div>
 
-        <div class="mb-4">
-            <h3>ねぎらいの星に訪れる人</h3>
-            <p>1. 誰かに褒められたい</p>
-            <p>2. 不安や悩みを周囲には話すことができない</p>
-            <p>3. 頑張っている自分を誰かにねぎらってもらいたい</p>
+        <div class="mb-5">
+            <h2 class="text-4xl mb-2">こんなときに役立ちます</h2>
+            <ol>
+                <li>頑張っている自分を誰かにねぎらってもらいたいとき</li>
+                <li>不安や弱音を吐きたいとき</li>
+                <li>共感してくれる人がほしいとき</li>
+            </ol>
         </div>
 
-        <div class="mb-4">
-            <h3>ねぎらいの星で使える言葉</h3>
-            <p>1. ありがとう</p>
-            <p>2. 頑張ってるね</p>
-            <p>3. 大丈夫</p>
+        <div class="mb-5">
+            <h3>ほしでの過ごしかた</h3>
+                <ol>
+                    <li>ねぎらってもらいたいことを投稿し、ほしに訪れた誰かにねぎらってもらう。</li>
+                    <li>ときには自分も誰かをねぎらって、お返しする。</li>
+                </ol>
         </div>
         <% if user_signed_in? %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home-btn" %>
-            <%= link_to 'ねぎらう', posts_path,   class: "home-btn" %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top-btn" %>
+            <%= link_to 'ねぎらう', posts_path,   class: "top-btn" %>
         <% else %>
-            <%= link_to 'ログイン', login_path,  class: "home-btn" %>
-            <%= link_to '新規登録', new_user_registration_path,  class: "home-btn" %>
-            <%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post,  class: "home-btn"%>
-    <% end %>
+            <%= link_to 'ログイン', login_path,  class: "top-btn" %>
+            <%= link_to '新規登録', new_user_registration_path,  class: "top-btn" %>
+            <%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post,  class: "top-btn"%>
+        <% end %>
+
+        <div>
+            <p><%= link_to '利用規約', term_path%></p>
+            <p><%= link_to 'プライバシー', privacy_path %></p>
+            <p><%= link_to 'お問い合わせ' %></p>
+        </div>
     </div>

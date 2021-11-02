@@ -2,16 +2,19 @@
 <h1><%= t('.title') %></h1>
   <div class="profiles-header">
     <% if @user.avatar? %>
-      <%= image_tag @user.avatar.url, id: 'preview', size: '80x80', class: 'rounded-circle' %>
+      <%= image_tag @user.avatar.url, id: 'preview', size: '50x50', class: 'rounded-circle' %>
     <% else %>
-      <%= image_tag src='default.png', class: "rounded-circle", size: '80x80' %>
+      <%= image_tag src='default.png', class: "rounded-circle", size: '50x50' %>
     <% end %>   
     <p class="profile-content"><%= @user.username %></p>
-    <p class="profile-content"><%= @user.email %></p>
+    <p class="profile-content mb-4"><%= @user.email %></p>
   </div>
-    <div class="profiles-footer">
+  <% if user_signed_in? && @user.id == current_user.id && current_user.not_guest? %>
+    <div class="profiles-footer mb-4">
       <%= link_to t(".edit"), edit_profiles_path, class: "edit-btn" %>
     </div>
+  <% end %>
 </div>
 
-<%= render 'users/show', posts: @posts %>
+
+  <%= render 'users/show', posts: @posts %>
