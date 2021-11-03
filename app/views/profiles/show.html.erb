@@ -4,7 +4,7 @@
     <% if @user.avatar? %>
       <%= image_tag @user.avatar.url, id: 'preview', size: '50x50', class: 'rounded-circle' %>
     <% else %>
-      <%= image_tag src='default.png', class: "rounded-circle", size: '50x50' %>
+      <%= image_tag src='default.jpeg', class: "rounded-circle", size: '50x50' %>
     <% end %>   
     <p class="profile-content"><%= @user.username %></p>
     <p class="profile-content mb-4"><%= @user.email %></p>
