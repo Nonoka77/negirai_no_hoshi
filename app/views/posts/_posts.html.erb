@@ -18,8 +18,8 @@
                             <button data-cancel-id=<%= post.id %> type="button" class="btn post-cancel-button">キャンセル</button>
                         </div>
                 </div>
-                <div class="side-bar row">
-                    <div class="react-icons">
+                <div class="side-bar">
+                    <div class="react-icons d-flex justify-content-around">
                         <span id="index_like_<%= post.id %>">
                             <%= render 'likes/like', post: post %>
                         </span>
@@ -30,12 +30,16 @@
                             <%= render 'cheers/cheer', post: post %>
                         </span>
                     </div>
-                    <div class="edit-icons">
+                    <div class="edit-icons d-flex justify-content-end">
                     <% if user_signed_in? && post.user_id == current_user.id && current_user.not_guest? %>
                         <span data-post-id="<%= post.id %>" class="js-edit-button">
                             <%= icon('fas', 'edit') %>
                         </span>
-                        <span><%= link_to "削除", post_path(post.id), class:"post_delete delete-icon", method: :delete %></span>
+                        <span>
+                            <%= link_to post_path(post.id), class:"post_delete delete-icon", method: :delete do %>
+                            <%= icon('far', 'trash-alt') %>
+                            <% end %>
+                        </span>
                     <% end %>
                     </div>
                 </div>

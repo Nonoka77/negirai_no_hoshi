@@ -1,6 +1,9 @@
 .posts-container {
     padding: 0 28px;
     color: white;
+    .posts {
+        padding-bottom: 100px;
+    }
     .my-post {
         width: 100%;
         position: relative;
@@ -50,29 +53,36 @@
                 width: 100%;
                 .react-icon {
                     text-decoration: none;
+                    .click-icon {
+                        transition: all .3s ease;
+                        &:active {
+                            transform: scale(1.2);
+                        }
+                    }
+                    .icon-count {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 0.6rem;
+                        margin-right: 0.2rem;
+                    }
+                    .icon-text {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 0.4rem;
+                        margin-right: 0.4rem;
+                    }
                 }
-                .icon-count {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 0.6rem;
-                    margin-right: 0.2rem;
-                }
-                .icon-text {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 0.4rem;
-                    margin-right: 0.4rem;
-                }
-                .delete-icon {
-                    color: rgb(53, 52, 52);
-                    text-decoration: none;
-                    font-size: 0.3rem;
-                }
-                .js-edit-button {
-                    cursor: pointer;
-                    margin-right: 1rem;
-                    font-size: 0.4rem;
-                    padding: 0.3rem;
+                .edit-icons {
+                    font-size: .5rem;
+                    padding: .2rem;
+                    .js-edit-button {
+                        margin-right: 1rem;
+                    }
+                    .delete-icon {
+                        color: rgb(53, 52, 52);
+                        text-decoration: none;
+                        margin-right: 1rem;
+                    }
                 }
             }
         }
@@ -80,33 +90,49 @@
     .new-post {
         position: relative;
         width: 100%;
+        padding-bottom: 100px;
+        margin-bottom: 100px;
         .post_form-text {
             width: 100%;
             border: 4px double #ddd;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             padding: 0;
             position: absolute;
+            border-radius: 12px;
         }
         .send {
             font-size: 1rem;
             background: transparent;
             border: 1px solid rgb(247, 240, 240);
-            border-radius: 4px;
+            border-radius: 14px;
             color: white;
-            font-weight: 400;
             letter-spacing: 5px;
-            line-height: 42px;
+            line-height: 32px;
             text-decoration: none;
-            margin: 1rem auto;
             text-align: center;
             -webkit-transition: all 0.5s ease;
             transition: all 0.5s ease;
             vertical-align: middle;
             width: 20%;
+            position: absolute;
+            right: 0;
+            top: 90px;
             &:hover {
                 background: rgb(204, 191, 15);
                 text-decoration: none;
             }
+        }
+    }
+}
+.shared-icons {
+    font-size: 2rem;
+    a {
+        text-decoration: none;
+        color: white;
+        transition: all .3s;
+        &:hover {
+            opacity: .4;
+            color: white;
         }
     }
 }

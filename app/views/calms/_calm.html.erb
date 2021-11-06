@@ -7,7 +7,7 @@
         <% end %>
     <% else %>
         <%= link_to post_calms_path(post), class: "react-icon", method: :post, remote: true do %>
-            <%= icon('fas', 'coffee', style: 'color: gray;') %>
+            <%= icon('fas', 'coffee', style: 'color: gray;', class: 'click-icon') %>
             <span class="icon-count"><%= post.calms.count %></span>
             <span class="icon-text">大丈夫</span>
         <% end %>
