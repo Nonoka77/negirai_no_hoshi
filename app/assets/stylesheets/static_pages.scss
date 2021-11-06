@@ -2,28 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.container {
+.content {
     margin-right: auto;
     margin-left: auto;
     color: white;
-    max-width: 400px;
-    .top-btn {
-        font-size: 1.2rem;
-        margin-right: 20px;
-        line-height: 1.5;
-        position: relative;
-        display: inline-block;
-        padding: 1rem 2rem;
-        cursor: pointer;
-        user-select: none;
+    max-width: 420px;
+    padding-bottom: 100px;
+
+    .top-background {
+        padding: 50px 0;
+        .start-btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            color: #f8fafc;
+            border: double 4px #f8fafc;
+            border-radius: 3px;
+            transition: 0.4s;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            color: white;
+            &:hover {
+                background-color: rgba(172, 169, 9, 0.925);
+            }
+        }
+    }
+    .sub-contents-1, .sub-contents-2{
+        padding: 0 25px 30px 25px;
+        .marker {
+            background: linear-gradient(transparent 60%, #a39f23 80%);
+        }
+        .features {
+            background-color: white;
+            color: black;
+            border-radius: 2rem;
+            padding: 12px 24px;
+            margin-bottom: 2rem;
+            z-index: 100;
+            .explain {
+                align-items: center;
+                img {
+                    width: 100%;
+                }
+                .explain-text {
+                    padding-left: 6px;
+                }
+            }
+            .explain-number {
+                font-size: 3rem;
+                font-family: 'Homemade Apple', cursive;
+            }
+        }
+    }
+    .policy {
         text-align: center;
-        vertical-align: middle;
-        text-decoration: none;
-        letter-spacing: 0.1em;
-        border-radius: 0.5rem;
-        color: white;
-        font-weight: 700;
-        border-radius: 100vh;
-        background-color: rgb(192, 192, 15);
+        justify-content: space-around;
+        a {
+            color: white;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
     }
 }
