@@ -1,55 +1,7 @@
-<div class="container md p-20 z-20 absolute">
-  <h4 class="mb-6">ねぎらいの星に訪れたひとのメッセージ</h4>
+<div class="posts-container">
   <div class="posts">
-    <% @posts.each do |post| %>
-      <div class="post" id="post<%= post.id%>">
-        <div class="my-post">
-          <div class="icon">
-          <% if post.user.avatar? %>
-            <%= image_tag post.user.avatar.url, id: 'preview', size: '80x80', class: 'rounded-circle' %>
-          <% else %>
-            <%= image_tag src='default.png', class: "ounded-circle", size: '80x80' %>
-          <% end %>   
-          </div>
-          <div class="message-content">
-            <p class="message"><%= simple_format post.content, id: "post_body" %></p>
-          <%#編集ボタンを押すことで編集フォームを表示する %>
-            <div id="js-post-<%= post.id %>" class="edit-field" >
-              <p id="js-post-error-<%= post.id %>" class="text-danger"></p>
-              <textarea style="display: none;" id="js-textarea-post-<%= post.id %>" class="post-error edit-textarea"><%= post.content %></textarea>
-              <div id="js-post-button-<%= post.id %>" style="display: none;" class="edit-post">
-                <button data-update-id=<%= post.id%> type="submit" class="btn post-update-button">更新</button>
-                <button data-cancel-id=<%= post.id %> type="button" class="btn post-cancel-button">キャンセル</button>
-              </div>
-            </div>
-            <div class="side-bar">
-              <span id="index_like_<%= post.id %>">
-                  <%= render 'likes/like', post: post %>
-              </span>
-              <span id="index_calm_<%= post.id %>">
-                  <%= render 'calms/calm', post: post %>
-              </span>
-              <span id="index_cheer_<%= post.id %>">
-                  <%= render 'cheers/cheer', post: post %>
-              </span>
-              <% if user_signed_in? && post.user_id == current_user.id %>
-                  <span data-post-id="<%= post.id %>" class="js-edit-button">
-                      <%= icon('fas', 'edit') %>
-                  </span>
-                  <%= link_to "削除", post_path(post.id), class:"post_delete delete-icon", method: :delete %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <div class="new-post">
-      <% if user_signed_in? %>
-        <%= form_with(model: @post, class: "post_form", id: "post_input", remote:true) do |f| %>
-          <%= f.text_area :content, class: "post_form-text" %>
-          <%= f.submit "送信", class: "send" %>
-        <% end %>
-      <% end %>
-    </div>
+    <h4 class="mb-6">ねぎらいのほしに届いたメッセージ</h4>
+    <%= render 'posts/posts', posts: @posts %>
+    <%= render 'shared/textbox' %>
   </div>
 </div>

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 before_action :set_post, only: %i[edit update destroy]
+before_action :authenticate_user!
 
   def create
     @post = Post.new(post_params)

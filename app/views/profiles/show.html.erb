@@ -1,17 +1,39 @@
-<div class= "container">
-<h1><%= t('.title') %></h1>
-  <div class="profiles-header">
-    <% if @user.avatar? %>
-      <%= image_tag @user.avatar.url, id: 'preview', size: '80x80', class: 'rounded-circle' %>
-    <% else %>
-      <%= image_tag src='default.png', class: "rounded-circle", size: '80x80' %>
-    <% end %>   
-    <p class="profile-content"><%= @user.username %></p>
-    <p class="profile-content"><%= @user.email %></p>
-  </div>
-    <div class="profiles-footer">
-      <%= link_to t(".edit"), edit_profiles_path, class: "edit-btn" %>
+<div class="content">
+  <div class= "container py-3">
+  <h1><%= t('.title') %></h1>
+    <div class="profiles-header">
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url, id: 'preview', size: '50x50', class: 'rounded-circle' %>
+      <% else %>
+        <%= image_tag src='default.jpeg', class: "rounded-circle", size: '50x50' %>
+      <% end %>   
+      <p class="profile-content"><%= @user.username %></p>
+      <p class="profile-content mb-3"><%= @user.email %></p>
     </div>
+    <% if user_signed_in? && @user.id == current_user.id && current_user.not_guest? %>
+      <div class="profiles-footer mb-5">
+        <%= link_to t(".edit"), edit_profiles_path, class: "edit-btn" %>
+      </div>
+    <% end %>
+    <div class="shared-icons d-flex justify-content-around">
+      <span class="shared-icon">
+        <%= link_to  "https://twitter.com/share?url=https://localhost:3000/top", title: 'Twitter', target: '_blank' do %>
+          <%= icon('fab', 'twitter') %>
+        <% end %>
+      </span>
+      <span class="shared-icon">
+        <%= link_to  "https://social-plugins.line.me/lineit/share?url=https://localhost:3000/top", title: 'Line', target: '_blank' do %>
+          <%= icon('fab', 'line') %>
+        <% end %>
+      </span>
+      <span class="shared-icon">
+        <%= link_to destroy_user_session_path, method: :delete, class: "top-btn" do %>
+          <%= icon('fas', 'sign-out-alt') %>
+        <% end %>
+      </span>
+    </div>
+  </div>
 </div>
 
-<%= render 'users/show', posts: @posts %>
+
+  <%= render 'users/show', posts: @posts %>
