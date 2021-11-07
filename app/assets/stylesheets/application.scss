@@ -13,6 +13,7 @@
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "static_pages";
@@ -27,10 +28,10 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #050d20 0%, #1d2e49 50%, #1e3d6b 100%);
-    color: white;
+    background: linear-gradient(to bottom, #050d20,#071730 70%, #143058 100%);
     position: relative;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 320px;
     &::after {
         content: "";
         position: absolute;
@@ -40,5 +41,11 @@ body {
         height: 100%;
         z-index: -10;
         background-image: url("stars.png");
+    }
+    .notice, .alert {
+        color: white;
+    }
+    .container {
+        color: white;
     }
 }

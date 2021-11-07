@@ -5,7 +5,7 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :validatable
 
   validates :email, uniqueness: true
-  validates :username, uniqueness: true
+  validates :username, presence: true, uniqueness: true, length: {minimum: 1 }
 
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -26,6 +26,10 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.confirmed_at = Time.now
     end
+  end
+
+  def not_guest?
+    self.email != 'guest@example.com' && self.username != 'guest'
   end
 
   def already_liked?(post)
