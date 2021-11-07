@@ -5,7 +5,7 @@
             <% if post.user.avatar? %>
                 <%= image_tag post.user.avatar.url, id: 'preview', size: '50x50', class: 'rounded-circle' %>
             <% else %>
-                <%= image_tag src='default.jpeg', class: "ounded-circle", size: '50x50', class: 'rounded-circle' %>
+                <%= image_tag src='default.jpeg', size: '50x50', class: 'rounded-circle' %>
             <% end %>   
             </div>
             <div class="message-content row">
@@ -13,10 +13,10 @@
                 <div id="js-post-<%= post.id %>" class="edit-field" >
                     <p id="js-post-error-<%= post.id %>" class="text-danger"></p>
                     <textarea style="display: none;" id="js-textarea-post-<%= post.id %>" class="post-error edit-textarea"><%= post.content %></textarea>
-                        <div id="js-post-button-<%= post.id %>" style="display: none;" class="edit-post">
-                            <button data-update-id=<%= post.id%> type="submit" class="btn post-update-button">更新</button>
-                            <button data-cancel-id=<%= post.id %> type="button" class="btn post-cancel-button">キャンセル</button>
-                        </div>
+                    <div id="js-post-button-<%= post.id %>" style="display: none;" class="edit-post">
+                        <button data-update-id=<%= post.id%> type="submit" class="btn post-update-button">更新</button>
+                        <button data-cancel-id=<%= post.id %> type="button" class="btn post-cancel-button">キャンセル</button>
+                    </div>
                 </div>
                 <div class="side-bar">
                     <div class="react-icons d-flex justify-content-around">
@@ -47,3 +47,4 @@
         </div>
     </div>
 <% end %>
+            
