@@ -6,7 +6,6 @@
     "autoprefixer": "^10.3.7",
     "cross-env": "^7.0.3",
     "postcss-cli": "^9.0.1",
-    "tailwindcss": "1.9.6",
     "webpack-dev-server": "^3"
   },
   "dependencies": {
