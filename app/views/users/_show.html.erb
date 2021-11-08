@@ -4,3 +4,6 @@
       <%= render 'posts/posts', posts: posts %>
   </div>
 </div>
+<% if user_signed_in? %>
+    <%= render 'shared/navbar' %>
+<% end %>
