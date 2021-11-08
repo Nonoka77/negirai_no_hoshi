@@ -18,8 +18,5 @@
   <body>
     <%= render 'shared/flash_message' %>
       <%= yield %>
-    <% unless current_page?(root_path) %>
-      <%= render 'shared/navbar' %>
-    <% end %>
   </body>
 </html>
