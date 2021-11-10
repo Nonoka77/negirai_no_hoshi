@@ -9,7 +9,7 @@ before_action :post_params, only: %i[create destroy]
         like.destroy
     end
 
-    private
+  private
     
     def post_params
         @post = Post.find(params[:post_id])

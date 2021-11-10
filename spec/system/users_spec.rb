@@ -13,8 +13,10 @@ RSpec.describe "GuestUsers", type: :system do
                 expect(page).to have_content('アカウント登録が完了しました')
             end
         end
+
         context '無効なユーザー名が入力された場合' do
             let(:user) {create :user}
+
             it '登録済みのユーザー名は無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: (user.username)
@@ -24,6 +26,7 @@ RSpec.describe "GuestUsers", type: :system do
                 click_on 'Sign up'
                 expect(page).to have_content('ユーザー名はすでに存在します')
             end
+
             it '空文字は無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: ' '
@@ -33,6 +36,7 @@ RSpec.describe "GuestUsers", type: :system do
                 click_on 'Sign up'
                 expect(page).to have_content('ユーザー名を入力してください')
             end
+
             it '空欄は無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: ''
@@ -44,8 +48,10 @@ RSpec.describe "GuestUsers", type: :system do
                 expect(page).to have_content('ユーザー名は1文字以上で入力してください')
             end
         end
+
         context '無効なメールアドレスが入力された場合' do
             let(:user) {create :user}
+
             it '登録済みのメールアドレスは無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: 'user'
@@ -55,6 +61,7 @@ RSpec.describe "GuestUsers", type: :system do
                 click_on 'Sign up'
                 expect(page).to have_content('メールアドレスはすでに存在します')
             end
+
             it '空欄は無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: 'user'
@@ -64,6 +71,7 @@ RSpec.describe "GuestUsers", type: :system do
                 click_on 'Sign up'
                 expect(page).to have_content('メールアドレスを入力してください')
             end
+
             it '空文字は無効になる' do
                 visit new_user_registration_path
                 fill_in 'user_username', with: 'user'
@@ -74,11 +82,13 @@ RSpec.describe "GuestUsers", type: :system do
                 expect(page).to have_content('メールアドレスを入力してください')
             end
         end
-
     end
+
     describe 'ログインページ' do
         let(:user) {create :user}
-        before  {login(user)}
+
+        before {login(user)}
+
         it 'ログイン後の表示に切り替わっている' do
             expect(page).to have_content('早速ねぎらってもらう')
             expect(page).to have_content('ホーム')

@@ -27,7 +27,6 @@ before_action :authenticate_user!
     @posts = Post.includes(:user).order(created_at: :desc)
   end
 
-
   def destroy
     if @post.destroy
       respond_to do |f|
@@ -49,5 +48,5 @@ before_action :authenticate_user!
 
   def set_post
     @post = Post.find(params[:id])
-end
+  end
 end
