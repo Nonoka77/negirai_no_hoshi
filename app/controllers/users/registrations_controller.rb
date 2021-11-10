@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: %i[:create]
+  before_action :configure_sign_up_params, only: %i[create]
   before_action :ensure_normal_user, only: %i[destroy update]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -43,18 +43,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :avatar])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[username email avatar])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :email, :avatar])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username email avatar])
   end
 
   def ensure_normal_user
-    if resource.email == 'guest@example.com'
-      redirect_to root_path, danger: 'ゲストユーザーの更新・削除はできません'
-    end
+    redirect_to root_path, danger: 'ゲストユーザーの更新・削除はできません' if resource.email == 'guest@example.com'
   end
   # The path used after sign up.
   # def after_sign_up_path_for(resource)

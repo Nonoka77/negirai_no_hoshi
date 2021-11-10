@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   before_action :set_user, only: %i[show update edit]
   before_action :valid_guest, only: %i[edit]
   def show
-    @posts= Post.where(user_id: current_user.id).order(created_at: :desc)
+    @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
   end
 
   def edit; end

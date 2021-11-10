@@ -4,5 +4,5 @@ class Post < ApplicationRecord
   has_many :calms, dependent: :destroy
   has_many :cheers, dependent: :destroy
 
-  validates :content, presence: true, length: { maximum: 255}
+  validates :content, presence: true, length: { maximum: 255 }
 end

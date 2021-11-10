@@ -1,14 +1,16 @@
 class PostsController < ApplicationController
-before_action :set_post, only: %i[edit update destroy]
-before_action :authenticate_user!
+  before_action :set_post, only: %i[edit update destroy]
+  before_action :authenticate_user!
 
   def create
     @post = Post.new(post_params)
     if @post.save
       respond_to do |f|
         f.html { redirect_to posts_path }
-        f.json { render json: { content: @post.content, username: @post.user.username, user_id: @post.user_id, id: @post.id} }
-      end 
+        f.json do
+          render json: { content: @post.content, username: @post.user.username, user_id: @post.user_id, id: @post.id }
+        end
+      end
     end
   end
 
@@ -18,8 +20,8 @@ before_action :authenticate_user!
     @post.update!(post_update_params)
     respond_to do |f|
       f.html { redirect_to posts_path }
-      f.json { render json: { content: @post.content, user_id: @post.user_id, id: @post.id} }
-    end 
+      f.json { render json: { content: @post.content, user_id: @post.user_id, id: @post.id } }
+    end
   end
 
   def index
@@ -31,8 +33,8 @@ before_action :authenticate_user!
     if @post.destroy
       respond_to do |f|
         f.html { redirect_to posts_path }
-        f.json { render json: { id: params[:id]} }
-      end 
+        f.json { render json: { id: params[:id] } }
+      end
     end
   end
 

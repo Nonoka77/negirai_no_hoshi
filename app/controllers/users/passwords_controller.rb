@@ -25,9 +25,7 @@ class Users::PasswordsController < Devise::PasswordsController
   protected
 
   def ensure_normal_user
-    if params[:user][:email].downcase == 'guest@example.com'
-      render login_path, alert: 'ゲストユーザーのパスワード再設定はできません。'
-    end    
+    render login_path, alert: 'ゲストユーザーのパスワード再設定はできません。' if params[:user][:email].downcase == 'guest@example.com'
   end
   # def after_resetting_password_path_for(resource)
   #   super(resource)

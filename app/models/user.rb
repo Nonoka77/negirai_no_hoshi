@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :email, presence: true, uniqueness: true
-  validates :username, presence: true, uniqueness: true, length: {minimum: 1 }
+  validates :username, presence: true, uniqueness: true, length: { minimum: 1 }
 
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -29,18 +29,18 @@ class User < ApplicationRecord
   end
 
   def not_guest?
-    self.email != 'guest@example.com' && self.username != 'guest'
+    email != 'guest@example.com' && username != 'guest'
   end
 
   def already_liked?(post)
-    self.likes.exists?(post_id: post.id)
+    likes.exists?(post_id: post.id)
   end
 
   def already_calmed?(post)
-    self.calms.exists?(post_id: post.id)
+    calms.exists?(post_id: post.id)
   end
 
   def already_cheered?(post)
-    self.cheers.exists?(post_id: post.id)
+    cheers.exists?(post_id: post.id)
   end
 end
