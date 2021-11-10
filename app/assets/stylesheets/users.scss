@@ -1,17 +1,17 @@
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 .feedback-input {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: black;
     border-radius: 5px;
-    line-height: 22px;
+    line-height: 1.37rem;
     background-color: white;
     border: 2px solid white;
     transition: all 0.3s;
-    padding: 13px;
-    margin-bottom: 30px;
+    padding: .8rem;
+    margin-bottom: 1.87rem;
     width: 100%;
     box-sizing: border-box;
     outline: 0;
@@ -26,11 +26,11 @@ h2 {
     border: 2px solid white;
     cursor: pointer;
     color: white;
-    font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 1.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
     transition: all 0.3s;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-weight: 700;
     &:hover {
         background: rgb(199, 186, 6);

@@ -6,11 +6,11 @@
     margin-right: auto;
     margin-left: auto;
     color: white;
-    max-width: 420px;
-    padding-bottom: 40px;
+    width: 100%;
+    padding-bottom: 2.5rem;
 
     .top-background {
-        padding: 30px 0;
+        padding: 1.8rem 0;
         .start-btn {
             display: inline-block;
             padding: 0.5em 1em;
@@ -28,7 +28,7 @@
         }
     }
     .sub-contents-1, .sub-contents-2{
-        padding: 0 25px 30px 25px;
+        padding: 0 1.5rem 1.8rem 1.5rem;
         .marker {
             background: linear-gradient(transparent 60%, #a39f23 80%);
         }
@@ -36,7 +36,7 @@
             background-color: white;
             color: black;
             border-radius: 2rem;
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             margin-bottom: 2rem;
             z-index: 100;
             .explain {
@@ -45,7 +45,7 @@
                     width: 100%;
                 }
                 .explain-text {
-                    padding-left: 6px;
+                    padding-left: .37rem;
                 }
             }
             .explain-number {

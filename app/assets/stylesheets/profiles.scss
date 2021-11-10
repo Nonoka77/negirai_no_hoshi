@@ -4,10 +4,10 @@
     position: relative;
     top: 0;
     img {
-        height: 160px;
+        height: 10rem;
         margin: 1.5rem auto;
         object-fit: cover;
-        width: 160px;
+        width: 10rem
     }
     .profile-content {
         font-size: 1.4rem;
@@ -19,14 +19,14 @@
     .edit-input {
         font-weight: 500;
         color: white;
-        font-size: 18px;
-        border-radius: 5px;
-        line-height: 22px;
+        font-size: 1.2rem;
+        border-radius: .3rem;
+        line-height: 1.4rem;
         background-color: transparent;
-        border: 2px solid white;
+        border: 0.125rem solid white;
         transition: all 0.3s;
-        padding: 13px;
-        margin-bottom: 30px;
+        padding: .8rem;
+        margin-bottom: 1.8rem;
         width: 100%;
         box-sizing: border-box;
         outline: 0;
@@ -40,13 +40,13 @@
     .edit-btn {
         background: transparent;
         border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 40px;
+        border-radius: 2.5rem;
         color: white;
         font-weight: 400;
-        letter-spacing: 5px;
-        line-height: 42px;
+        letter-spacing: 0.3rem;
+        line-height: 2.625rem;
         text-decoration: none;
-        margin: 10px auto;
+        margin: 0.625rem auto;
         padding: .5rem 1rem;
         text-align: center;
         -webkit-transition: all 0.5s ease;
