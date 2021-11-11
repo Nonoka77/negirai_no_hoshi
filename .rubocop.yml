@@ -2,13 +2,8 @@ inherit_from: .rubocop_todo.yml
 
 require:
   - rubocop-rails
-  - rubocop-rspec
   - rubocop-performance
 
-inherit_from:
-  - config/rubocop/rubocop.yml
-  - config/rubocop/rails.yml
-  - config/rubocop/rspec.yml
 
 AllCops:
   NewCops: enable
@@ -28,8 +23,18 @@ AllCops:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
 AsciiComments:
   Enabled: false
-  
+
 ClassAndModuleChildren:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
