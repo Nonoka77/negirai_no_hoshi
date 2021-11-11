@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Users::PasswordsController < Devise::PasswordsController
-  before_action :ensure_normal_user, only: %i[create]
   # GET /resource/password/new
   # def new
   #   super
@@ -25,7 +24,7 @@ class Users::PasswordsController < Devise::PasswordsController
   protected
 
   def ensure_normal_user
-    render login_path, alert: 'ゲストユーザーのパスワード再設定はできません。' if params[:user][:email].downcase == 'guest@example.com'
+    render login_path, alert: 'ゲストユーザーのパスワード再設定はできません。' if params[:user][:email].casecmp('guest@example.com').zero?
   end
   # def after_resetting_password_path_for(resource)
   #   super(resource)
