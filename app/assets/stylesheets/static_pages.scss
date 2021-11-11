@@ -26,6 +26,9 @@
                 background-color: rgba(172, 169, 9, 0.925);
             }
         }
+        .title {
+            font-size: 2rem;
+        }
         .guest-login {
             width: 80%;
         }
@@ -33,9 +36,8 @@
             width: 80%;
         }
         .logo {
-            width: 15rem;
-            height: 15rem;
-            mix-blend-mode: screen;
+            width: 100%;
+            height: auto;
         }
     }
     .sub-contents-1,
