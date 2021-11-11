@@ -41,14 +41,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop', require: false
   gem 'rubocop-performance'
   gem 'rubocop-rails'
-  gem 'rubocop-rspec'
   gem 'sqlite3', '~> 1.4' # <= 開発環境とテスト環境用として設定
 end
 
@@ -80,19 +79,19 @@ group :production do
   gem 'pg'
 end
 
-#ログイン機能
+# ログイン機能
 gem 'devise'
-#環境変数
+# 環境変数
 gem 'dotenv-rails'
-#ajax機能
+# ajax機能
 gem 'jquery-rails'
-#入力フォーム
+# 入力フォーム
 gem 'simple_form'
-#画像のアップロード
+# 画像のアップロード
 gem 'carrierwave'
 gem 'mini_magick'
-#日本語翻訳
+# 日本語翻訳
 gem 'nokogiri', '>= 1.8.5'
 gem 'rails-i18n'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
