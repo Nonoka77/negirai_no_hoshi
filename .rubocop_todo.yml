@@ -1,0 +1,416 @@
+
+# # Cop supports --auto-correct.
+# # Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation, Include.
+# # Include: **/*.gemfile, **/Gemfile, **/gems.rb
+# # Bundler/OrderedGems:
+# #   Exclude:
+# #     - 'Gemfile'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, IndentationWidth.
+# # SupportedStyles: outdent, indent
+# # Layout/AccessModifierIndentation:
+# #   Exclude:
+# #     - 'app/controllers/application_controller.rb'
+# #     - 'app/controllers/likes_controller.rb'
+
+# # Offense count: 3
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, IndentationWidth.
+# # SupportedStyles: with_first_argument, with_fixed_indentation
+# # Layout/ArgumentAlignment:
+# #   Exclude:
+# #     - 'app/models/user.rb'
+# #     - 'bin/webpack'
+# #     - 'bin/webpack-dev-server'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyleAlignWith.
+# # SupportedStylesAlignWith: either, start_of_block, start_of_line
+# # Layout/BlockAlignment:
+# #   Exclude:
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyleAlignWith, Severity.
+# # SupportedStylesAlignWith: start_of_line, def
+# # Layout/DefEndAlignment:
+# #   Exclude:
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Layout/EmptyLineAfterMagicComment:
+# #   Exclude:
+# #     - 'config/initializers/simple_form.rb'
+
+# # Offense count: 3
+# # Cop supports --auto-correct.
+# # Configuration parameters: EmptyLineBetweenMethodDefs, EmptyLineBetweenClassDefs, EmptyLineBetweenModuleDefs, AllowAdjacentOneLineDefs, NumberOfEmptyLines.
+# # Layout/EmptyLineBetweenDefs:
+# #   Exclude:
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'app/controllers/users/sessions_controller.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Layout/EmptyLines:
+# #   Exclude:
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'config/routes.rb'
+
+# # Offense count: 9
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # SupportedStyles: empty_lines, no_empty_lines
+# # Layout/EmptyLinesAroundBlockBody:
+# #   Exclude:
+# #     - 'config/routes.rb'
+# #     - 'db/schema.rb'
+# #     - 'spec/requests/calms_spec.rb'
+# #     - 'spec/requests/cheers_spec.rb'
+# #     - 'spec/requests/posts_spec.rb'
+# #     - 'spec/requests/profiles_spec.rb'
+# #     - 'spec/requests/static_pages_spec.rb'
+# #     - 'spec/requests/users_spec.rb'
+# #     - 'spec/system/users_spec.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # # SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
+# # Layout/EmptyLinesAroundClassBody:
+# #   Exclude:
+# #     - 'app/models/post.rb'
+
+# # Offense count: 4
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
+# # Layout/ExtraSpacing:
+# #   Exclude:
+# #     - 'db/migrate/20211022095035_devise_create_users.rb'
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+# #     - 'spec/system/users_spec.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowMultipleStyles, EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
+# # SupportedHashRocketStyles: key, separator, table
+# # SupportedColonStyles: key, separator, table
+# # SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
+# # Layout/HashAlignment:
+# #   Exclude:
+# #     - 'config/initializers/simple_form.rb'
+# #     - 'config/routes.rb'
+
+# # Offense count: 12
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # SupportedStyles: normal, indented_internal_methods
+# # Layout/IndentationConsistency:
+# #   Exclude:
+# #     - 'app/controllers/likes_controller.rb'
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+
+# # Offense count: 60
+# # Cop supports --auto-correct.
+# #  Configuration parameters: Width, IgnoredPatterns.
+# # Layout/IndentationWidth:
+# #   Exclude:
+# #     - 'app/controllers/application_controller.rb'
+# #     - 'app/controllers/calms_controller.rb'
+# #     - 'app/controllers/cheers_controller.rb'
+# #     - 'app/controllers/likes_controller.rb'
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'spec/support/login_module.rb'
+# #     - 'spec/system/posts_spec.rb'
+# #     - 'spec/system/profiles_spec.rb'
+# #     - 'spec/system/users_spec.rb'
+
+# # Offense count: 6
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowDoxygenCommentStyle, AllowGemfileRubyComment.
+# # Layout/LeadingCommentSpace:
+# #   Exclude:
+# #     - 'Gemfile'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Layout/SpaceAfterColon:
+# #   Exclude:
+# #     - 'app/controllers/application_controller.rb'
+
+# # Offense count: 1
+# # # Cop supports --auto-correct.
+# # Layout/SpaceAfterComma:
+# #   Exclude:
+# #     - 'app/controllers/application_controller.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator.
+# # # SupportedStylesForExponentOperator: space, no_space
+# # Layout/SpaceAroundOperators:
+# #   Exclude:
+# #     - 'app/controllers/profiles_controller.rb'
+# #     - 'app/controllers/users_controller.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # # Configuration parameters: AllowForAlignment.
+# # Layout/SpaceBeforeFirstArg:
+# #   Exclude:
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
+# # SupportedStyles: space, no_space, compact
+# # # SupportedStylesForEmptyBrackets: space, no_space
+# # Layout/SpaceInsideArrayLiteralBrackets:
+# #   Exclude:
+# #     - 'config/environments/production.rb'
+
+# # Offense count: 14
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
+# # SupportedStyles: space, no_space
+# # # SupportedStylesForEmptyBraces: space, no_space
+# # Layout/SpaceInsideBlockBraces:
+# #   Exclude:
+# #     - 'spec/system/posts_spec.rb'
+# #     - 'spec/system/profiles_spec.rb'
+# #     - 'spec/system/users_spec.rb'
+
+# # Offense count: 5
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
+# # SupportedStyles: space, no_space, compact
+# # # SupportedStylesForEmptyBraces: space, no_space
+# # Layout/SpaceInsideHashLiteralBraces:
+# #   Exclude:
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'app/models/post.rb'
+# #     - 'app/models/user.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # # SupportedStyles: final_newline, final_blank_line
+# # Layout/TrailingEmptyLines:
+# #   Exclude:
+# #     - 'spec/system/posts_spec.rb'
+# #     - 'spec/system/users_spec.rb'
+
+# # Offense count: 16
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowInHeredoc.
+# # Layout/TrailingWhitespace:
+# #   Exclude:
+# #     - 'app/controllers/application_controller.rb'
+# #     - 'app/controllers/calms_controller.rb'
+# #     - 'app/controllers/cheers_controller.rb'
+# #     - 'app/controllers/likes_controller.rb'
+# #     - 'app/controllers/posts_controller.rb'
+# #     - 'app/controllers/users/passwords_controller.rb'
+# #     - 'app/controllers/users/sessions_controller.rb'
+# #     - 'db/migrate/20211024061649_create_posts.rb'
+# #     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+# #     - 'spec/factories/users.rb'
+# #     - 'spec/system/posts_spec.rb'
+
+# # Offense count: 4
+# # Cop supports --auto-correct.
+# Lint/ParenthesesAsGroupedExpression:
+#   Exclude:
+#     - 'spec/system/profiles_spec.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# Lint/PercentSymbolArray:
+#   Exclude:
+#     - 'app/controllers/users/registrations_controller.rb'
+#     - 'app/controllers/users/sessions_controller.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods, IgnoreNotImplementedMethods.
+# Lint/UnusedMethodArgument:
+#   Exclude:
+#     - 'app/uploaders/avatar_uploader.rb'
+
+# # Offense count: 3
+# Lint/UselessAssignment:
+#   Exclude:
+#     - 'app/controllers/calms_controller.rb'
+#     - 'app/controllers/cheers_controller.rb'
+#     - 'app/controllers/likes_controller.rb'
+
+# # Offense count: 5
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowComments.
+# Lint/UselessMethodDefinition:
+#   Exclude:
+#     - 'app/controllers/users/registrations_controller.rb'
+#     - 'app/controllers/users/sessions_controller.rb'
+
+# # Offense count: 7
+# # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
+# # IgnoredMethods: refine
+# Metrics/BlockLength:
+#   Max: 84
+
+# # Offense count: 1
+# # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
+# Metrics/MethodLength:
+#   Max: 16
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# Style/BlockComments:
+#   Exclude:
+#     - 'spec/spec_helper.rb'
+
+# # Offense count: 7
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # SupportedStyles: nested, compact
+# Style/ClassAndModuleChildren:
+#   Exclude:
+#     - 'app/controllers/users/confirmations_controller.rb'
+#     - 'app/controllers/users/omniauth_callbacks_controller.rb'
+#     - 'app/controllers/users/passwords_controller.rb'
+#     - 'app/controllers/users/registrations_controller.rb'
+#     - 'app/controllers/users/sessions_controller.rb'
+#     - 'app/controllers/users/unlocks_controller.rb'
+#     - 'test/test_helper.rb'
+
+# # Offense count: 30
+# # Configuration parameters: AllowedConstants.
+# Style/Documentation:
+#   Enabled: false
+
+# # Offense count: 96
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle.
+# # SupportedStyles: always, always_true, never
+# Style/FrozenStringLiteralComment:
+#   Enabled: false
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# Style/GlobalStdStream:
+#   Exclude:
+#     - 'config/environments/production.rb'
+
+# # Offense count: 5
+# # Configuration parameters: MinBodyLength.
+# Style/GuardClause:
+#   Exclude:
+#     - 'app/controllers/posts_controller.rb'
+#     - 'app/controllers/profiles_controller.rb'
+#     - 'app/controllers/users/passwords_controller.rb'
+#     - 'app/controllers/users/registrations_controller.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
+# # SupportedStyles: ruby19, hash_rockets, no_mixed_keys, ruby19_no_mixed_keys
+# Style/HashSyntax:
+#   Exclude:
+#     - 'db/migrate/20211108093208_add_confirmable_to_devise.rb'
+
+# # Offense count: 3
+# # Cop supports --auto-correct.
+# Style/IfUnlessModifier:
+#   Exclude:
+#     - 'app/controllers/profiles_controller.rb'
+#     - 'app/controllers/users/passwords_controller.rb'
+#     - 'app/controllers/users/registrations_controller.rb'
+
+# # # Offense count: 2
+# # Style/MixinUsage:
+# #   Exclude:
+# #     - 'bin/setup'
+# #     - 'bin/update'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: MinDigits, Strict.
+# Style/NumericLiterals:
+#   Exclude:
+#     - 'db/schema.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: PreferredDelimiters.
+# Style/PercentLiteralDelimiters:
+#   Exclude:
+#     - 'app/uploaders/avatar_uploader.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# Style/RedundantBegin:
+#   Exclude:
+#     - 'bin/yarn'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# # Configuration parameters: SafeForConstants.
+# Style/RedundantFetchBlock:
+#   Exclude:
+#     - 'config/puma.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# Style/RedundantParentheses:
+#   Exclude:
+#     - 'spec/system/users_spec.rb'
+
+# # Offense count: 5
+# # Cop supports --auto-correct.
+# Style/RedundantSelf:
+#   Exclude:
+#     - 'app/models/user.rb'
+
+# # Offense count: 2
+# # Cop supports --auto-correct.
+# Style/StderrPuts:
+#   Exclude:
+#     - 'bin/yarn'
+
+# # Offense count: 165
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
+# # SupportedStyles: single_quotes, double_quotes
+# Style/StringLiterals:
+#   Enabled: false
+
+# # Offense count: 4
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyle, MinSize.
+# # # SupportedStyles: percent, brackets
+# # Style/SymbolArray:
+# #   Exclude:
+# #     - 'Gemfile'
+# #     - 'app/controllers/users/registrations_controller.rb'
+
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyleForMultiline.
+# # # SupportedStylesForMultiline: comma, consistent_comma, no_comma
+# # Style/TrailingCommaInHashLiteral:
+# #   Exclude:
+# #     - 'config/routes.rb'
+
+# # Offense count: 3
+# # Cop supports --auto-correct.
+# # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# # URISchemes: http, https
+# # Layout/LineLength:
+# #   Max: 154
