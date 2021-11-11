@@ -1,7 +1,7 @@
 class CalmsController < ApplicationController
   before_action :post_params, only: %i[create destroy]
   def create
-    calm = current_user.calms.create(post_id: @post.id)
+    current_user.calms.create(post_id: @post.id)
   end
 
   def destroy

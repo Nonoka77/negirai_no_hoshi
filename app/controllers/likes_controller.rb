@@ -1,7 +1,7 @@
 class LikesController < ApplicationController
   before_action :post_params, only: %i[create destroy]
   def create
-    like = current_user.likes.create(post_id: @post.id)
+    current_user.likes.create(post_id: @post.id)
   end
 
   def destroy

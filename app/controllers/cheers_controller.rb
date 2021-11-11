@@ -1,7 +1,7 @@
 class CheersController < ApplicationController
   before_action :post_params, only: %i[create destroy]
   def create
-    cheer = current_user.cheers.create(post_id: @post.id)
+    current_user.cheers.create(post_id: @post.id)
   end
 
   def destroy
