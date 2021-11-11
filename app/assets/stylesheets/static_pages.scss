@@ -10,7 +10,7 @@
     padding-bottom: 2.5rem;
 
     .top-background {
-        padding: 1.8rem 0;
+        padding-bottom: 1.8rem;
         .start-btn {
             display: inline-block;
             padding: 0.5em 1em;
@@ -29,18 +29,21 @@
         .guest-login {
             width: 80%;
         }
-        .login-btn {
-            margin: 0 1.5rem;
-        }
         .post-btn {
             width: 80%;
         }
+        .logo {
+            width: 15rem;
+            height: 15rem;
+            mix-blend-mode: screen;
+        }
     }
-    .sub-contents-1, .sub-contents-2{
+    .sub-contents-1,
+    .sub-contents-2 {
         padding: 0 1.5rem 1.8rem 1.5rem;
         .marker {
             background: linear-gradient(transparent 60%, #a39f23 90%);
-            border-radius: .4rem;
+            border-radius: 0.4rem;
         }
         .features {
             background-color: white;
@@ -55,12 +58,12 @@
                     width: 100%;
                 }
                 .explain-text {
-                    padding-left: .37rem;
+                    padding-left: 0.37rem;
                 }
             }
             .explain-number {
                 font-size: 3rem;
-                font-family: 'Fleur De Leah', cursive;
+                font-family: "Fleur De Leah", cursive;
             }
         }
     }
