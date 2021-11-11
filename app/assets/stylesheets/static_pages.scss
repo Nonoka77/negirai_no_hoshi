@@ -26,17 +26,27 @@
                 background-color: rgba(172, 169, 9, 0.925);
             }
         }
+        .guest-login {
+            width: 80%;
+        }
+        .login-btn {
+            margin: 0 1.5rem;
+        }
+        .post-btn {
+            width: 80%;
+        }
     }
     .sub-contents-1, .sub-contents-2{
         padding: 0 1.5rem 1.8rem 1.5rem;
         .marker {
-            background: linear-gradient(transparent 60%, #a39f23 80%);
+            background: linear-gradient(transparent 60%, #a39f23 90%);
+            border-radius: .4rem;
         }
         .features {
             background-color: white;
             color: black;
             border-radius: 2rem;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1rem;
             margin-bottom: 2rem;
             z-index: 100;
             .explain {

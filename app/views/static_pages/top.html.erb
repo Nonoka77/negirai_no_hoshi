@@ -3,19 +3,22 @@
         <div class="top-background pb-30">
                 <div class="main-contents">
                     <div class="container">
+                        <div class="m-2 text-center">
+                            <%= image_tag src='moon.jpeg', size: '250x250', class: 'logo' %>
+                        </div>
                         <h1 class="mb-4 title text-center">ねぎらいのほし</h1>
                             <div class="chatches mb-5">
                                 <h3 class="text-center bold mb-4">互いにねぎらい、<br>ほっと心癒される場所。</h3>
                                 <div class="sub-chatch mt-10 text-center">
                                     <p class="text-left mb-4">頑張るあなたを<span class="orange bold">”ねぎらう”</span>サービスです。</p>
                                         <% if !user_signed_in? %>
-                                            <p class="text-center"><%= link_to '今すぐ始める(ゲスト)', guest_sign_in_path, method: :post, class: "start-btn" %></h1>
-                                            <div class="d-flex justify-content-around">
-                                                <p><%= link_to 'ログイン', login_path,  class: "start-btn" %></p>
+                                            <p class="text-center"><%= link_to '今すぐ始める(ゲスト)', guest_sign_in_path, method: :post, class: "start-btn guest-login" %></h1>
+                                            <div class="d-flex">
+                                                <p><%= link_to 'ログイン', login_path,  class: "start-btn login-btn" %></p>
                                                 <p><%= link_to '新規登録', new_user_registration_path,  class: "start-btn" %></p>
                                             </div>
                                         <% else %>
-                                            <%= link_to '早速ねぎらってもらう', posts_path, class: "start-btn" %>
+                                            <%= link_to '早速ねぎらってもらう', posts_path, class: "start-btn post-btn" %>
                                         <% end %>
                                 </div>
                             </div>
@@ -23,58 +26,58 @@
                     </div>
                 </div>
             <div class="sub-contents-1 center container">
-                <h1 class="font-weight-bold"><span class="marker">"ねぎらいのほし"</span>ってなに？</h1>
-                <p class="mb-5">ねぎらいのほしはこんなときに役立ちます。</p>
+                <h2 class="font-weight-bold text-center mb-3"><span class="marker">"ねぎらいのほし"</span>って？</h2>
+                <p class="mb-4 small">ねぎらいのほしはこんなときに役立ちます。</p>
                 <div class="features">
-                    <h4 class="pt-2">1. ねぎらってもらいたいとき</h4>
+                    <h4 class="pt-2">1. ねぎらってもらいたい</h4>
                     <div class="explain d-flex row p-6">
                         <div class="col-5 my-3">
                             <%= image_tag src='comfort.jpeg', class: 'rounded-circle' %>
                         </div>
                         <div class="col-7 explain-text">
-                            <p>ねぎらってもらい<br>自己肯定感を上げよう。</p>
+                            <p class="small">ねぎらってもらい、自己肯定感を上げよう。</p>
                         </div>
                     </div>
                 </div>
                 <div class="features">
-                    <h4 class="pt-2">2. 不安や弱音を吐きたいとき</h4>
+                    <h4 class="pt-2">2. 不安や弱音を吐きたい</h4>
                     <div class="explain d-flex flex-row-reverse p-6">
                         <div class="col-5 my-2">
                             <%= image_tag src='unhappy_girl.jpeg', class: 'rounded-circle' %>
                         </div>
                         <div class="col-7">
-                            <p>不安や弱音は吐き出して<br>発散しましょう。</p>
+                            <p class="small">不安や弱音は吐き出してスッキリしよう。</p>
                         </div>
                     </div>
                 </div>
                 <div class="features">
-                    <h4 class="pt-2">3. 共感してもらいたいとき</h4>
+                    <h4 class="pt-2">3. 共感してもらいたい</h4>
                     <div class="explain d-flex p-6">
                             <div class="col-5">
                                 <%= image_tag src='friendship.jpeg',class: 'rounded-circle' %>
                             </div>
                             <div class="col-7 explain-text">
-                                <p>共感してくれる人が<br>きっといるはずです。</p>
+                                <p class="small">共感してもらうだけで楽になることも。</p>
                             </div>
                     </div>
                 </div>
             </div>
             <div class="sub-contents-2 center container">
-                <h1 class="my-5 text-center"><span class="marker">特徴・使い方</span></h1>
+                <h2 class="my-5 text-center"><span class="marker">特徴・使い方</span></h2>
                 <div class="features">
                     <h1 class="explain-number text-center my-2">01</h1>
-                    <h2>コミュニケーションに使える言葉は３つだけ。</h2>
+                    <h3>他のユーザーに送れる言葉は３つだけ。</h3>
                     <div class="text-center my-4">
                         <%= image_tag src='hugging.jpeg', size: '200x200', class: 'contain rounded-circle' %>
                     </div>
                     <div class="explain text-center">
-                        <p>「ステキ」 「大丈夫」 「わかるよ」</p>
-                        <p>ただ、聞いてもらいたい<br>そんなとき多くの言葉は必要ありません。</p>
+                        <p>「ステキ」「大丈夫」「わかるよ」</p>
+                        <p>ただ、聞いてもらいたいときに<br>多くの言葉はいらない。</p>
                     </div>
                 </div>
                 <div class="features">
                     <h1 class="explain-number text-center my-2">02</h1>
-                    <h2 class="text-center">ときには他のユーザーを<br>ねぎらってあげよう</h2>
+                    <h3 class="text-center">ときには他のユーザーをねぎらおう</h3>
                     <div class="text-center my-4">
                         <%= image_tag src='text-message.jpeg', size: '200x200', class: 'contain rounded-circle' %>
                     </div>
