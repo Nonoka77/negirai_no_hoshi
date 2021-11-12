@@ -1,4 +1,6 @@
 # ねぎらいのほし
+<img src="https://user-images.githubusercontent.com/84692432/141401170-4cbd5ea1-0562-41b4-8b71-91e7142fde82.png" width="1200px" >
+
 ねぎらいのほしは、頑張るあなたを"ねぎらう"サービスです。
 
 # 登場人物
