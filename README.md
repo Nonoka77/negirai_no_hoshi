@@ -1,7 +1,13 @@
 # ねぎらいのほし
+ねぎらいのほしは、頑張ったことや不安なことを匿名で呟き、励ましてもらえるアプリです！
+
 <img src="https://user-images.githubusercontent.com/84692432/141401170-4cbd5ea1-0562-41b4-8b71-91e7142fde82.png" width="1200px" >
 
-ねぎらいのほしは、頑張るあなたを"ねぎらう"サービスです。
+
+# アプリURL
+スマホ対応のアプリなので、スマホから見るのをオススメします！
+https://negirai-no-hoshi.herokuapp.com/
+
 
 # 登場人物
 
