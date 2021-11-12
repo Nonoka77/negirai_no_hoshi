@@ -6,7 +6,7 @@
 
 # アプリURL
 スマホ対応のアプリなので、スマホから見るのをオススメします！<br>
-https://negirai-no-hoshi.herokuapp.com/
+https://www.negirai-no-hoshi.com/
 
 
 # 登場人物
