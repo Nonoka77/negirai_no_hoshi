@@ -3,9 +3,9 @@
   <h1><%= t('.title') %></h1>
     <div class="profiles-header">
       <% if @user.avatar? %>
-        <%= image_tag @user.avatar.url, id: 'preview', size: '50x50', class: 'rounded-circle' %>
+        <%= image_tag @user.avatar.url, id: 'preview', size: '160x160', class: 'rounded-circle' %>
       <% else %>
-        <%= image_tag src='default.jpeg', class: "rounded-circle", size: '50x50' %>
+        <%= image_tag src='default.jpeg', class: "rounded-circle", size: '160x160' %>
       <% end %>   
       <p class="profile-content"><%= @user.username %></p>
       <p class="profile-content mb-3"><%= @user.email %></p>
