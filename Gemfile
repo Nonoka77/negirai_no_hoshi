@@ -90,6 +90,7 @@ gem 'simple_form'
 # 画像のアップロード
 gem 'carrierwave'
 gem 'mini_magick'
+gem "aws-sdk-s3", require: false 
 # 日本語翻訳
 gem 'rails-i18n'
 gem 'nokogiri', '>= 1.8.5'
