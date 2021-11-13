@@ -88,11 +88,12 @@ gem 'jquery-rails'
 # 入力フォーム
 gem 'simple_form'
 # 画像のアップロード
+gem 'aws-sdk-s3', require: false
+gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
-gem "aws-sdk-s3", require: false 
 # 日本語翻訳
-gem 'rails-i18n'
 gem 'nokogiri', '>= 1.8.5'
+gem 'rails-i18n'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
