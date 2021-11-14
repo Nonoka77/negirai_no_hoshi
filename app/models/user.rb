@@ -31,16 +31,4 @@ class User < ApplicationRecord
   def not_guest?
     email != 'guest@example.com' && username != 'guest'
   end
-
-  def already_liked?(post)
-    likes.exists?(post_id: post.id)
-  end
-
-  def already_calmed?(post)
-    calms.exists?(post_id: post.id)
-  end
-
-  def already_cheered?(post)
-    cheers.exists?(post_id: post.id)
-  end
 end
