@@ -1,15 +1,7 @@
 <% if user_signed_in? %>
-    <% if current_user.already_cheered?(post) %>
-        <%= link_to post_cheers_path(post), class: "react-icon", method: :delete, remote: true do %>
-            <%= icon('fas', 'smile-wink', style: 'color: #FFCC33') %>
-            <span class="icon-count"><%= post.cheers.count %></span>
-            <span class="icon-text">   わかるよ</span>
-        <% end %>
-    <% else %>
-        <%= link_to post_cheers_path(post), class: "react-icon", method: :post, remote: true do %>
-            <%= icon('far', 'smile-wink', style: 'color: gray;', class: 'click-icon') %>
-            <span class="icon-count"><%= post.cheers.count %></span>
-            <span class="icon-text">   わかるよ</span>
-        <% end %>
+    <%= link_to post_cheers_path(post), class: "react-icon", method: :post, remote: true do %>
+        <%= icon('far', 'smile-wink', style: 'color:  #FFCC33;', class: 'click-icon') %>
+        <span class="icon-count"><%= post.cheers.count %></span>
+        <span class="icon-text">   わかるよ</span>
     <% end %>
 <% end %>

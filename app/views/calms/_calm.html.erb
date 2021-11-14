@@ -1,15 +1,7 @@
 <% if user_signed_in? %>
-    <% if current_user.already_calmed?(post) %>
-        <%= link_to post_calms_path(post), class: "react-icon", method: :delete, remote: true do %>
-            <%= icon('fas', 'mug-hot', style: 'color: #663300') %>
-            <span class="icon-count"><%= post.calms.count %></span>
-            <span class="icon-text">大丈夫</span>
-        <% end %>
-    <% else %>
-        <%= link_to post_calms_path(post), class: "react-icon", method: :post, remote: true do %>
-            <%= icon('fas', 'coffee', style: 'color: gray;', class: 'click-icon') %>
-            <span class="icon-count"><%= post.calms.count %></span>
-            <span class="icon-text">大丈夫</span>
-        <% end %>
+    <%= link_to post_calms_path(post), class: "react-icon", method: :post, remote: true do %>
+        <%= icon('fas', 'coffee', style: 'color:  #663300', class: 'click-icon') %>
+        <span class="icon-count"><%= post.calms.count %></span>
+        <span class="icon-text">大丈夫</span>
     <% end %>
 <% end %>

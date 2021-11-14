@@ -3,12 +3,7 @@ class CheersController < ApplicationController
   def create
     current_user.cheers.create(post_id: @post.id)
   end
-
-  def destroy
-    cheer = Cheer.find_by(post_id: @post.id, user_id: current_user.id)
-    cheer.destroy
-  end
-
+  
   private
 
   def post_params

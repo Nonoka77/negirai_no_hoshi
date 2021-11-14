@@ -3,12 +3,7 @@ class CalmsController < ApplicationController
   def create
     current_user.calms.create(post_id: @post.id)
   end
-
-  def destroy
-    calm = Calm.find_by(post_id: @post.id, user_id: current_user.id)
-    calm.destroy
-  end
-
+  
   private
 
   def post_params
