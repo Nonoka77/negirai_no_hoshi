@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     post 'login', to: 'users/sessions#create'
     delete 'signout', to: 'users/sessions#destroy'
-    post 'guest_sign_in', to: 'users/sessions#guest_sign_in'
     get 'users/show', to: 'users#show'
   end
 

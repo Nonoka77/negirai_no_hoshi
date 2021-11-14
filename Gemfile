@@ -81,6 +81,8 @@ end
 
 # ログイン機能
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
 # 環境変数
 gem 'dotenv-rails'
 # ajax機能

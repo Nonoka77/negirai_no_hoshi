@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'GuestUsers', type: :system do
+RSpec.describe 'Users', type: :system do
   describe '新規登録ページ' do
     context '正しく入力された場合' do
       it '正常に登録される' do

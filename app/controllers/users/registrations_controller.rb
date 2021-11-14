@@ -42,10 +42,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: %i[username email avatar])
   end
-
-  def ensure_normal_user
-    redirect_to root_path, danger: 'ゲストユーザーの更新・削除はできません' if resource.email == 'guest@example.com'
-  end
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
   #   super(resource)

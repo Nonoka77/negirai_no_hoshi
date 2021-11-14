@@ -49,20 +49,4 @@ RSpec.describe 'Posts', type: :system do
       end
     end
   end
-
-  describe 'ゲストユーザーの場合' do
-    before do
-      visit root_path
-      click_on '今すぐ始める(ゲスト)'
-      click_on 'ねぎらう'
-      fill_in 'post_content', with: 'content'
-      click_on '送信'
-    end
-
-    it '編集・削除ボタンは表示されない' do
-      expect(page).to have_content('content')
-      expect(page).not_to have_selector('.fa-edit')
-      expect(page).not_to have_selector('.fa-trash-alt')
-    end
-  end
 end

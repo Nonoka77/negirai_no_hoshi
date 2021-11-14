@@ -7,11 +7,6 @@ class Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
 
-  def guest_sign_in
-    user = User.guest
-    sign_in user
-    redirect_to root_path, notice: 'ねぎらいの星へようこそ'
-  end
 
   protected
 

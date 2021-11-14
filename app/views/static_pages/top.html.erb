@@ -12,7 +12,6 @@
                                 <div class="sub-chatch mt-10 text-center">
                                     <p class="text-left mb-4">頑張るあなたを<span class="orange bold">”ねぎらう”</span>サービスです。</p>
                                         <% if !user_signed_in? %>
-                                            <p class="text-center"><%= link_to '今すぐ始める(ゲスト)', guest_sign_in_path, method: :post, class: "start-btn guest-login" %></h1>
                                             <div class="d-flex justify-content-evenly">
                                                 <p><%= link_to 'ログイン', login_path,  class: "start-btn login-btn" %></p>
                                                 <p><%= link_to '新規登録', new_user_registration_path,  class: "start-btn registration-btn" %></p>

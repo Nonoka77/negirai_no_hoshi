@@ -21,11 +21,8 @@ class Users::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  protected
+  # protected
 
-  def ensure_normal_user
-    render login_path, alert: 'ゲストユーザーのパスワード再設定はできません。' if params[:user][:email].casecmp('guest@example.com').zero?
-  end
   # def after_resetting_password_path_for(resource)
   #   super(resource)
   # end
