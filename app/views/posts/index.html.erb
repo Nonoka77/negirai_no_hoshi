@@ -2,7 +2,11 @@
   <div class="posts">
     <h4 class="mb-6">ねぎらいのほしに届いたメッセージ</h4>
     <%= render 'posts/posts', posts: @posts %>
-    <%= render 'shared/textbox' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/textbox' %>
+    <% end %>
   </div>
 </div>
-<%= render 'shared/navbar' %>
+<% if user_signed_in? %>
+  <%= render 'shared/navbar' %>
+<% end %>

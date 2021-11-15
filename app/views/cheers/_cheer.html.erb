@@ -1,7 +1,6 @@
-<% if user_signed_in? %>
-    <%= link_to post_cheers_path(post), class: "react-icon", method: :post, remote: true do %>
-        <%= icon('far', 'smile-wink', style: 'color:  #FFCC33;', class: 'click-icon') %>
-        <span class="icon-count"><%= post.cheers.count %></span>
-        <span class="icon-text">   わかるよ</span>
-    <% end %>
+<%= link_to post_cheers_path(post), class: "react-icon", method: :post, remote: true do %>
+    <%= icon('far', 'smile-wink', style: 'color:  #FFCC33;', class: 'click-icon') %>
+    <span class="icon-count"><%= post.cheers.count %></span>
+    <span class="icon-text">   わかるよ</span>
 <% end %>
+

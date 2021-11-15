@@ -1,10 +1,8 @@
 <div class="new-post">
-    <% if user_signed_in? %>
-        <%= form_with(model: @post, class: "post_form", id: "post_input", remote:true) do |f| %>
-            <div class="new-post-box d-flex">
-                <%= f.text_area :content, class: "post_form-text" %>
-                <%= f.submit "送信", class: "send" %>
-            </div>
-        <% end %>
+    <%= form_with(model: @post, class: "post_form", id: "post_input", remote:true) do |f| %>
+        <div class="new-post-box d-flex">
+            <%= f.text_area :content, class: "post_form-text" %>
+            <%= f.submit "送信", class: "send" %>
+        </div>
     <% end %>
 </div>
