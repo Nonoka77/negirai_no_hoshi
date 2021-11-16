@@ -31,22 +31,22 @@
                 position: absolute;
                 top: 1.75rem;
                 left: -1.4rem;
-                border: .75rem solid transparent;
-                border-right: .75rem solid #f8faff;
+                border: 0.75rem solid transparent;
+                border-right: 0.75rem solid #f8faff;
             }
             .edit-field {
                 width: 100%;
                 position: relative;
                 cursor: pointer;
                 .edit-textarea {
-                    border-radius: .25rem;
+                    border-radius: 0.25rem;
                     background-color: #f8faff;
                     width: 100%;
                 }
             }
             p {
                 margin: 0.3rem auto;
-                padding: 0 0 0 .5rem;
+                padding: 0 0 0 0.5rem;
             }
             .side-bar {
                 text-decoration: none;
@@ -110,16 +110,16 @@
     .new-post-box {
         .post_form-text {
             width: 70%;
-            border: .25rem double #ddd;
+            border: 0.25rem double #ddd;
             margin: 1.5rem;
-            border-radius: .75rem;
+            border-radius: 0.75rem;
             padding: 0.5rem;
         }
         .send {
-            font-size: .8rem;
+            font-size: 0.8rem;
             background: white;
             border: 1px solid rgb(247, 240, 240);
-            border-radius: .5rem;
+            border-radius: 0.5rem;
             color: black;
             height: 2rem;
             align-self: center;
@@ -156,14 +156,14 @@
         li {
             flex: 1;
             &:hover {
-                border-top: .3rem solid #f8e750;
+                border-top: 0.3rem solid #f8e750;
             }
             a {
                 text-decoration: none;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: .625rem;
+                padding: 0.625rem;
                 height: 3.1rem;
                 color: #213074;
                 &:hover,
@@ -176,10 +176,48 @@
                     font-size: 1.2rem;
                 }
                 span {
-                    font-size: .75rem;
+                    font-size: 0.75rem;
                     line-height: 1.2;
                 }
             }
+        }
+    }
+}
+
+.nav-login {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    left: 0;
+    background: rgba(20, 26, 70, 0.7);
+    .lead {
+        color: #e1d209;
+    }
+    .login-btn, .registration-btn {
+        font-size: 1rem;
+        background: white;
+        border: 1px solid rgb(247, 240, 240);
+        border-radius: 100vh;
+        color: black;
+        height: 3rem;
+        align-self: center;
+        width: 300px;
+        letter-spacing: 0.3rem;
+        padding: 0.5rem 1rem;
+        line-height: 1.5rem;
+        text-decoration: none;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        vertical-align: middle;
+        &:hover {
+            background: rgb(204, 191, 15);
+            text-decoration: none;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
         }
     }
 }
